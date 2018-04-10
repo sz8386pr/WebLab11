@@ -1,6 +1,11 @@
 body {
-  padding: 50px;
+  padding: 15px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: whitesmoke;
+}
+
+img {
+  max-width: 100%;
 }
 
 a {
