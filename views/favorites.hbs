@@ -1,0 +1,23 @@
+<h1>Favorites</h1>
+
+<div class="fav-list">
+
+  {{#each favorites}}
+
+  <div class="fav-item">
+    <a href="{{ this.nasa_url }}">
+      <img class="fav-image" src="{{ this.url }}">
+    </a>
+
+    <span class="fav-title">{{ this.title }}</span>
+    <span class="fav-data">{{ this.date }}</span>
+
+  </div>
+
+  {{else}}
+
+  <p>No favorites saved yet.</p>
+
+  {{/each}}
+
+</div>
