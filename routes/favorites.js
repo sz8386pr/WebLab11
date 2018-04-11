@@ -29,4 +29,22 @@ router.post('/add', function(req, res, next){
   res.redirect('/favorites');
 });
 
+
+// POST to delete ALL favorite images of the user
+router.post('/deleteAll', function(req, res, next){
+  req.session.favorites = []; // overwrite/reset favorites to a new array
+
+  // Redirect to the favorites page
+  res.redirect('/favorites');
+});
+
+
+// POST to delete this favorite images from the favorites
+router.post('/delete', function(req, res, next){
+  req.session.favorites.pull({"title":req.body.title});
+
+  // Redirect to the favorites page
+  res.redirect('/favorites');
+})
+
 module.exports = router;
