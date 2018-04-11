@@ -42,6 +42,7 @@ router.post('/deleteAll', function(req, res, next){
 // POST to delete this favorite images from the favorites
 router.post('/delete', function(req, res, next){
 
+  // remove the index from the array
   req.session.favorites.splice(req.body.index, 1);
 
   // Redirect to the favorites page

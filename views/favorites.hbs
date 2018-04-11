@@ -12,6 +12,9 @@
     <span class="fav-title">{{ this.title }}</span>
     <span class="fav-date">{{ this.date }}</span>
 
+
+  <!-- hidden input "index" will pass the index number of the array object.
+       Will be used to remove the array object by the index number -->
     <form action="favorites/delete" method="POST">
         <input type='hidden' name='index' value={{@index}}>
         <button type=submit class="btn btn-warning" name="delete" onclick="return confirm('Are you sure?')">Delete</button>
@@ -19,7 +22,7 @@
 
   </div>
 
-  {{else}}
+  {{else}}  <!-- if there are no favorites -->
 
   <p>No favorites saved yet.</p>
 
