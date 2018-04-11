@@ -13,8 +13,8 @@
     <span class="fav-date">{{ this.date }}</span>
 
     <form action="favorites/delete" method="POST">
-      <input type=hidden name='title' value={{this.title}}>
-      <button type=submit class="btn btn-warning" name="delete" onclick="return confirm('Are you sure?')">Delete</button>
+        <input type='hidden' name='index' value={{@index}}>
+        <button type=submit class="btn btn-warning" name="delete" onclick="return confirm('Are you sure?')">Delete</button>
     </form>
 
   </div>
@@ -26,7 +26,7 @@
   {{/each}}
 
   <form action="favorites/deleteAll" method="POST">
-    <button type=submit class="btn btn-error" name="deleteAll" onclick="return confirm('Are you sure?')">Delete All</button>
+    <button type=submit class="btn btn-danger" name="deleteAll" onclick="return confirm('Are you sure?')">Delete All</button>
   </form>
 
 </div>

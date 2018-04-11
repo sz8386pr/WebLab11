@@ -41,10 +41,11 @@ router.post('/deleteAll', function(req, res, next){
 
 // POST to delete this favorite images from the favorites
 router.post('/delete', function(req, res, next){
-  req.session.favorites.pull({"title":req.body.title});
+
+  req.session.favorites.splice(req.body.index, 1);
 
   // Redirect to the favorites page
   res.redirect('/favorites');
-})
+});
 
 module.exports = router;
