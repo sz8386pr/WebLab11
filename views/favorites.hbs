@@ -25,8 +25,11 @@
 
   {{/each}}
 
-  <form action="favorites/deleteAll" method="POST">
-    <button type=submit class="btn btn-danger" name="deleteAll" onclick="return confirm('Are you sure?')">Delete All</button>
-  </form>
+    {{#if favorites}}
+        <form action="favorites/deleteAll" method="POST">
+            <button type=submit class="btn btn-danger" name="deleteAll" onclick="return confirm('This will delete all favorites-- Are you sure?')">Delete All</button>
+        </form>
+    {{/if}}
+
 
 </div>
